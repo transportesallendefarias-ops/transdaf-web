@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRANSDAF | Transportes y Asistencia</title>
+
+    <meta name="description" content="TRANSDAF - Transportes Darwin Allende Farías EIRL. Servicios de transporte y asistencia desde 2019.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #65000f, #8d0b1b);
+            color: white;
+            padding: 22px 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        .nav a:hover {
+            opacity: 0.75;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #65000f, #a10e20);
+            color: white;
+            padding: 100px 7%;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 3vw, 32px);
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button-white {
+            background: white;
+            color: #720010;
+        }
+
+        .button-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #720010;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .services {
+            background: #f4f4f4;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .service {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            color: #720010;
+            margin-bottom: 10px;
+        }
+
+        .trust {
+            background: white;
+        }
+
+        .trust-box {
+            background: #720010;
+            color: white;
+            border-radius: 15px;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .trust-box h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .trust-box p {
+            max-width: 700px;
+            margin: auto;
+            opacity: 0.95;
+        }
+
+        .contact {
+            background: #f4f4f4;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .contact-card .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            color: #720010;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: #444;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        footer {
+            background: #1b1b1b;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer strong {
+            color: #fff;
+        }
+
+        .footer-small {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                position: static;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 70px 7%;
+            }
+
+            section {
+                padding: 60px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="brand">TRANSDAF</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#confian">Confían en nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>TRANSDAF</h1>
+
+            <h2>Transportes Darwin Allende Farías EIRL</h2>
+
+            <p>
+                Servicios de transporte y asistencia para personas,
+                vehículos y empresas. Operando desde 2019 con
+                compromiso, responsabilidad y calidad de servicio.
+            </p>
+
+            <a class="button button-white" href="#servicios">
+                Ver nuestros servicios
+            </a>
+
+            <a class="button button-outline" href="#contacto">
+                Contactarnos
+            </a>
+        </div>
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section class="about" id="nosotros">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Nosotros</h2>
+                <p>Experiencia y compromiso desde 2019</p>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    En <strong>TRANSDAF</strong> nos especializamos en
+                    servicios de transporte y asistencia, entregando
+                    soluciones confiables y profesionales para nuestros
+                    clientes y empresas asociadas.
+                </p>
+
+                <br>
+
+                <p>
+                    Nuestro compromiso es desarrollar cada servicio con
+                    responsabilidad, seguridad y una atención orientada
+                    a las necesidades de nuestros clientes.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Nuestros servicios</h2>
+                <p>Soluciones de transporte y asistencia</p>
+            </div>
+
+            <div class="services-grid">
+
+                <div class="service">
+                    <div class="service-icon">🚗</div>
+                    <h3>Traslado de vehículos</h3>
+                    <p>
+                        Traslado seguro de vehículos según los
+                        requerimientos del servicio.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-icon">🚕</div>
+                    <h3>Taxi preventivo</h3>
+                    <p>
+                        Transporte preventivo para clientes que
+                        requieren una alternativa segura.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-icon">✈️</div>
+                    <h3>Traslado aeropuerto</h3>
+                    <p>
+                        Servicios de traslado hacia y desde
+                        terminales aeroportuarios.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-icon">👨‍✈️</div>
+                    <h3>Conductor por Ley de Alcoholes</h3>
+                    <p>
+                        Servicio de conductor para traslado
+                        seguro del cliente y su vehículo.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-icon">🔧</div>
+                    <h3>Traslado a talleres</h3>
+                    <p>
+                        Coordinación y traslado de vehículos
+                        hacia talleres y centros de servicio.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <div class="service-icon">🔍</div>
+                    <h3>Inspección y revisión vehicular</h3>
+                    <p>
+                        Servicios de inspección y revisión
+                        asociados a la operación vehicular.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- EMPRESAS -->
+    <section class="trust" id="confian">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Empresas que confían en nosotros</h2>
+                <p>
+                    Trabajamos entregando soluciones de transporte
+                    y asistencia para nuestros clientes.
+                </p>
+            </div>
+
+            <div class="trust-box">
+                <h3>Compromiso y confianza</h3>
+
+                <p>
+                    Desde 2019 desarrollamos nuestras operaciones
+                    con foco en la seguridad, responsabilidad y
+                    calidad de servicio.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Estamos disponibles para atender tus consultas</p>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+                    <div class="icon">💬</div>
+
+                    <h3>WhatsApp</h3>
+
+                    <p>
+                        <a
+                            href="https://wa.me/56920414225"
+                            target="_blank"
+                        >
+                            +56 9 2041 4225
+                        </a>
+                    </p>
+                </div>
+
+
+                <div class="contact-card">
+                    <div class="icon">✉️</div>
+
+                    <h3>Correo electrónico</h3>
+
+                    <p>
+                        <a
+                            href="mailto:transportesallendefarias@gmail.com"
+                        >
+                            transportesallendefarias@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <strong>TRANSDAF</strong>
+
+    <div class="footer-small">
+        Transportes Darwin Allende Farías EIRL
+    </div>
+
+    <div class="footer-small">
+        Servicios de transporte y asistencia · Desde 2019
+    </div>
+
+    <div class="footer-small">
+        © 2026 TRANSDAF. Todos los derechos reservados.
+    </div>
+</footer>
+
+</body>
+</html>
