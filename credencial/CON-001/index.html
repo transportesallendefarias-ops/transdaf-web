@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,6 +7,7 @@
 <title>Credencial TRANSDAF - CON-001</title>
 
 <style>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -168,8 +170,18 @@ body {
 }
 
 .data-icon {
-    font-size: 35px;
+    width: 35px;
+    height: 35px;
     color: #720018;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-icon svg {
+    width: 35px;
+    height: 35px;
+    display: block;
 }
 
 .data-label {
@@ -202,7 +214,16 @@ body {
     width: 90px;
     height: 105px;
     background: #720018;
-    clip-path: polygon(50% 0%, 91% 15%, 91% 55%, 75% 80%, 50% 100%, 25% 80%, 9% 55%, 9% 15%);
+    clip-path: polygon(
+        50% 0%,
+        91% 15%,
+        91% 55%,
+        75% 80%,
+        50% 100%,
+        25% 80%,
+        9% 55%,
+        9% 15%
+    );
     color: white;
     display: flex;
     align-items: center;
@@ -287,9 +308,19 @@ body {
 }
 
 .service-icon {
-    font-size: 42px;
+    width: 52px;
+    height: 52px;
     color: #720018;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon svg {
+    width: 52px;
+    height: 52px;
+    display: block;
 }
 
 .service-name {
@@ -334,7 +365,18 @@ body {
 }
 
 .contact-icon {
-    font-size: 35px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon svg {
+    width: 42px;
+    height: 42px;
+    display: block;
 }
 
 .contact-title {
@@ -525,7 +567,13 @@ body {
     }
 
     .service-icon {
-        font-size: 35px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .service-icon svg {
+        width: 42px;
+        height: 42px;
     }
 
     .service-name {
@@ -536,6 +584,7 @@ body {
         font-size: 19px;
     }
 }
+
 </style>
 </head>
 
@@ -543,323 +592,663 @@ body {
 
 <div class="page">
 
-    <!-- ENCABEZADO -->
-    <header class="header">
+<!-- =========================
+     ENCABEZADO
+========================= -->
+
+<header class="header">
+
+    <img
+        src="../../logo-transdaf.png"
+        alt="TRANSDAF"
+        class="logo"
+    >
+
+    <div class="company-name">
+        Transportes Darwin Allende Farías EIRL
+    </div>
+
+    <div class="header-line"></div>
+
+    <div class="header-subtitle">
+        SERVICIOS DE TRANSPORTE Y ASISTENCIA
+    </div>
+
+</header>
+
+
+<!-- =========================
+     CONDUCTOR
+========================= -->
+
+<section class="driver-section">
+
+    <div class="photo-container">
 
         <img
-            src="../../logo-transdaf.png"
-            alt="TRANSDAF"
-            class="logo"
+            src="../../CON-001.png"
+            alt="Cristofer Allende Andrade"
+            class="driver-photo"
         >
 
-        <div class="company-name">
-            Transportes Darwin Allende Farías EIRL
+    </div>
+
+    <div class="driver-info">
+
+        <h1>CRISTOFER ALLENDE ANDRADE</h1>
+
+        <div class="position">
+
+            <!-- ÍCONO PERSONA -->
+            <svg width="24" height="24" viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="white"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"></path>
+            </svg>
+
+            CONDUCTOR TRANSDAF
+
         </div>
 
-        <div class="header-line"></div>
 
-        <div class="header-subtitle">
-            SERVICIOS DE TRANSPORTE Y ASISTENCIA
-        </div>
+        <!-- ESTADO -->
 
-    </header>
+        <div class="status-box">
 
+            <div class="status-main">
 
-    <!-- CONDUCTOR -->
-    <section class="driver-section">
+                <span class="status-icon">✓</span>
 
-        <div class="photo-container">
-            <img
-                src="../../CON-001.png"
-                alt="Cristofer Allende Andrade"
-                class="driver-photo"
-            >
-        </div>
-
-        <div class="driver-info">
-
-            <h1>CRISTOFER ALLENDE ANDRADE</h1>
-
-            <div class="position">
-                👤 CONDUCTOR TRANSDAF
-            </div>
-
-            <!-- ESTADO -->
-            <div class="status-box">
-
-                <div class="status-main">
-                    <span class="status-icon">✓</span>
-                    CREDENCIAL VIGENTE
-                </div>
-
-                <div class="session">
-                    Sesión válida: <span id="timer">02:00</span>
-                </div>
+                CREDENCIAL VIGENTE
 
             </div>
 
-            <!-- DATOS -->
-            <div class="data-row">
+            <div class="session">
 
-                <div class="data-item">
-                    <div class="data-icon">▣</div>
+                Sesión válida:
+                <span id="timer">02:00</span>
 
-                    <div>
-                        <div class="data-label">RUT</div>
-                        <div class="data-value">20.223.122-5</div>
+            </div>
+
+        </div>
+
+
+        <!-- DATOS -->
+
+        <div class="data-row">
+
+            <div class="data-item">
+
+                <div class="data-icon">
+
+                    <!-- ÍCONO CREDENCIAL -->
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round">
+
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <circle cx="8" cy="11" r="2"></circle>
+                        <path d="M5.5 16c.7-1.7 1.5-2.5 2.5-2.5s1.8.8 2.5 2.5"></path>
+                        <path d="M14 9h4"></path>
+                        <path d="M14 12h4"></path>
+                        <path d="M14 15h3"></path>
+
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <div class="data-label">RUT</div>
+
+                    <div class="data-value">
+                        20.223.122-5
                     </div>
+
                 </div>
 
-                <div class="data-item">
-                    <div class="data-icon">♢</div>
+            </div>
 
-                    <div>
-                        <div class="data-label">ID CONDUCTOR</div>
-                        <div class="data-value">CON-001</div>
+
+            <div class="data-item">
+
+                <div class="data-icon">
+
+                    <!-- ÍCONO ESCUDO -->
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.8"
+                         stroke-linecap="round"
+                         stroke-linejoin="round">
+
+                        <path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z"></path>
+                        <path d="M9 12l2 2 4-4"></path>
+
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <div class="data-label">
+                        ID CONDUCTOR
                     </div>
+
+                    <div class="data-value">
+                        CON-001
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- VERIFICACIÓN -->
-    <section class="verification">
+<!-- =========================
+     VERIFICACIÓN
+========================= -->
 
-        <div class="shield">
-            ✓
+<section class="verification">
+
+    <div class="shield">
+        ✓
+    </div>
+
+    <div>
+
+        <h2>VERIFICACIÓN</h2>
+
+        <p>
+            Esta credencial identifica a un conductor autorizado
+            por TRANSDAF para la prestación de servicios
+            de transporte y asistencia.
+        </p>
+
+    </div>
+
+    <div class="since">
+
+        <div class="since-small">
+            EMPRESA OPERANDO
         </div>
 
         <div>
-            <h2>VERIFICACIÓN</h2>
-
-            <p>
-                Esta credencial identifica a un conductor autorizado
-                por TRANSDAF para la prestación de servicios
-                de transporte y asistencia.
-            </p>
+            DESDE
         </div>
 
-        <div class="since">
-
-            <div class="since-small">
-                EMPRESA OPERANDO
-            </div>
-
-            <div>DESDE</div>
-
-            <div class="since-year">
-                2019
-            </div>
-
+        <div class="since-year">
+            2019
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- SERVICIOS -->
-    <h2 class="section-title">
-        SERVICIOS AUTORIZADOS
-    </h2>
+<!-- =========================
+     SERVICIOS
+========================= -->
 
-    <section class="services">
+<h2 class="section-title">
+    SERVICIOS AUTORIZADOS
+</h2>
 
-        <div class="service">
-            <div class="service-icon">🚗</div>
-            <div class="service-name">
-                REVISIÓN<br>TÉCNICA
-            </div>
+<section class="services">
+
+
+<!-- 1. REVISIÓN TÉCNICA -->
+
+<div class="service">
+
+    <div class="service-icon">
+
+        <!-- AUTO -->
+        <svg viewBox="0 0 64 64"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="3"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <path d="M13 38l5-14c1-3 3-5 6-5h16c3 0 5 2 6 5l5 14"></path>
+            <path d="M9 38h46v12H9z"></path>
+            <circle cx="18" cy="50" r="4"></circle>
+            <circle cx="46" cy="50" r="4"></circle>
+            <path d="M20 31h24"></path>
+
+        </svg>
+
+    </div>
+
+    <div class="service-name">
+        REVISIÓN<br>TÉCNICA
+    </div>
+
+</div>
+
+
+<!-- 2. TAXI PREVENTIVO -->
+
+<div class="service">
+
+    <div class="service-icon">
+
+        <!-- TAXI -->
+        <svg viewBox="0 0 64 64"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="3"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <path d="M12 38l5-14c1-3 3-5 6-5h18c3 0 5 2 6 5l5 14"></path>
+            <path d="M8 38h48v12H8z"></path>
+            <circle cx="18" cy="50" r="4"></circle>
+            <circle cx="46" cy="50" r="4"></circle>
+
+            <rect x="25" y="12" width="14" height="7" rx="2"></rect>
+
+            <path d="M28 15h8"></path>
+
+        </svg>
+
+    </div>
+
+    <div class="service-name">
+        TAXI<br>PREVENTIVO
+    </div>
+
+</div>
+
+
+<!-- 3. TRASLADO AEROPUERTO -->
+
+<div class="service">
+
+    <div class="service-icon">
+
+        <!-- AVIÓN -->
+        <svg viewBox="0 0 64 64"
+             fill="currentColor"
+             aria-hidden="true">
+
+            <path d="M29 7h6l4 21 17 8v5H39l-3 16h-8l-3-16H7v-5l17-8 5-21z"></path>
+
+        </svg>
+
+    </div>
+
+    <div class="service-name">
+        TRASLADO<br>AEROPUERTO
+    </div>
+
+</div>
+
+
+<!-- 4. CONDUCTOR POR LEY DE ALCOHOLES -->
+
+<div class="service">
+
+    <div class="service-icon">
+
+        <!-- VOLANTE / MANUBRIO -->
+        <svg viewBox="0 0 64 64"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="3"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <circle cx="32" cy="32" r="23"></circle>
+
+            <circle cx="32" cy="32" r="7"></circle>
+
+            <path d="M12 27c5-4 12-6 20-6s15 2 20 6"></path>
+
+            <path d="M32 39v13"></path>
+
+            <path d="M20 50l8-11"></path>
+
+            <path d="M44 50l-8-11"></path>
+
+        </svg>
+
+    </div>
+
+    <div class="service-name">
+        CONDUCTOR<br>POR LEY DE<br>ALCOHOLES
+    </div>
+
+</div>
+
+
+<!-- 5. TRASLADO A TALLERES -->
+
+<div class="service">
+
+    <div class="service-icon">
+
+        <!-- LLAVE INGLESA -->
+        <svg viewBox="0 0 64 64"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="5"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <path d="M18 17a13 13 0 0 0 17 17L52 51a5 5 0 0 0 7-7L42 27a13 13 0 0 0-17-17l8 8-7 7-8-8z"></path>
+
+        </svg>
+
+    </div>
+
+    <div class="service-name">
+        TRASLADO<br>A TALLERES
+    </div>
+
+</div>
+
+
+<!-- 6. INSPECCIÓN / MECÁNICA PRE-VIAJE -->
+
+<div class="service">
+
+    <div class="service-icon">
+
+        <!-- AGENDA / CHECKLIST -->
+        <svg viewBox="0 0 64 64"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="3"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <rect x="13" y="10" width="38" height="47" rx="3"></rect>
+
+            <path d="M23 10v-4h18v4"></path>
+
+            <path d="M21 24l3 3 6-7"></path>
+            <path d="M35 22h9"></path>
+
+            <path d="M21 35l3 3 6-7"></path>
+            <path d="M35 33h9"></path>
+
+            <path d="M21 46l3 3 6-7"></path>
+            <path d="M35 44h9"></path>
+
+        </svg>
+
+    </div>
+
+    <div class="service-name">
+        INSPECCIÓN /<br>
+        MECÁNICA<br>
+        PRE-VIAJE
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<h2 class="section-title">
+    CONTACTO TRANSDAF
+</h2>
+
+<section class="contact-grid">
+
+
+<!-- EMAIL -->
+
+<a
+    href="mailto:transportesallendefarias@gmail.com"
+    class="contact-card email"
+    style="text-decoration:none;"
+>
+
+    <div class="contact-icon">
+
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="M4 7l8 6 8-6"></path>
+
+        </svg>
+
+    </div>
+
+    <div>
+
+        <div class="contact-title">
+            CONTACTO:
         </div>
 
-        <div class="service">
-            <div class="service-icon">🚕</div>
-            <div class="service-name">
-                TAXI<br>PREVENTIVO
-            </div>
+        <div class="contact-text">
+            transportesallendefarias@gmail.com
         </div>
 
-        <div class="service">
-            <div class="service-icon">✈</div>
-            <div class="service-name">
-                TRASLADO<br>AEROPUERTO
-            </div>
+    </div>
+
+</a>
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/56920414225"
+    target="_blank"
+    class="contact-card whatsapp"
+    style="text-decoration:none;"
+>
+
+    <div class="contact-icon">
+
+        <!-- ÍCONO WHATSAPP -->
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+
+            <path d="M20 11.5a8 8 0 0 1-11.7 7L4 20l1.5-4.2A8 8 0 1 1 20 11.5z"></path>
+
+            <path d="M9 9c.4 2 2 3.6 4 4"></path>
+            <path d="M9 9l1-1"></path>
+            <path d="M13 13l1-1"></path>
+
+        </svg>
+
+    </div>
+
+    <div>
+
+        <div class="contact-title">
+            WHATSAPP
         </div>
 
-        <div class="service">
-            <div class="service-icon">◉</div>
-            <div class="service-name">
-                CONDUCTOR<br>POR LEY DE<br>ALCOHOLES
-            </div>
+        <div class="contact-text">
+            +56 9 2041 4225
         </div>
 
-        <div class="service">
-            <div class="service-icon">🔧</div>
-            <div class="service-name">
-                TRASLADO<br>A TALLERES
-            </div>
-        </div>
+    </div>
 
-        <div class="service">
-            <div class="service-icon">☑</div>
-            <div class="service-name">
-                INSPECCIÓN /<br>MECÁNICA<br>PRE-VIAJE
-            </div>
-        </div>
-
-    </section>
+</a>
 
 
-    <!-- CONTACTO -->
-    <h2 class="section-title">
-        CONTACTO TRANSDAF
-    </h2>
+<!-- INSTAGRAM -->
 
-    <section class="contact-grid">
-
-        <a
-            href="mailto:transportesallendefarias@gmail.com"
-            class="contact-card email"
-            style="text-decoration:none;"
-        >
-            <div class="contact-icon">✉</div>
-
-            <div>
-                <div class="contact-title">CONTACTO:</div>
-                <div class="contact-text">
-                    transportesallendefarias@gmail.com
-                </div>
-            </div>
-        </a>
-
-
-        <a
-            href="https://wa.me/56920414225"
-            target="_blank"
-            class="contact-card whatsapp"
-            style="text-decoration:none;"
-        >
-            <div class="contact-icon">◉</div>
-
-            <div>
-                <div class="contact-title">WHATSAPP</div>
-                <div class="contact-text">
-                    +56 9 2041 4225
-                </div>
-            </div>
-        </a>
-
-
-       <a
+<a
     href="https://www.instagram.com/transdaf/"
     target="_blank"
     class="contact-card instagram"
     style="text-decoration:none; color:#171717;"
 >
+
     <div class="contact-icon instagram-icon">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-        <defs>
-            <linearGradient id="instagramGradient"
-                x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#FFD600"/>
-                <stop offset="35%" stop-color="#FF7A00"/>
-                <stop offset="65%" stop-color="#FF0069"/>
-                <stop offset="100%" stop-color="#7638FA"/>
-            </linearGradient>
-        </defs>
 
-        <rect x="3" y="3" width="18" height="18" rx="5"
-              fill="none"
-              stroke="url(#instagramGradient)"
-              stroke-width="2"/>
+        <!-- INSTAGRAM -->
+        <svg viewBox="0 0 24 24"
+             aria-hidden="true">
 
-        <circle cx="12" cy="12" r="4"
+            <defs>
+
+                <linearGradient
+                    id="instagramGradient"
+                    x1="0%"
+                    y1="100%"
+                    x2="100%"
+                    y2="0%"
+                >
+
+                    <stop offset="0%" stop-color="#FFD600"/>
+                    <stop offset="35%" stop-color="#FF7A00"/>
+                    <stop offset="65%" stop-color="#FF0069"/>
+                    <stop offset="100%" stop-color="#7638FA"/>
+
+                </linearGradient>
+
+            </defs>
+
+            <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
                 fill="none"
                 stroke="url(#instagramGradient)"
-                stroke-width="2"/>
+                stroke-width="2"
+            />
 
-        <circle cx="17.5" cy="6.5" r="1.2"
-                fill="#FF0069"/>
-    </svg>
-</div>
+            <circle
+                cx="12"
+                cy="12"
+                r="4"
+                fill="none"
+                stroke="url(#instagramGradient)"
+                stroke-width="2"
+            />
+
+            <circle
+                cx="17.5"
+                cy="6.5"
+                r="1.2"
+                fill="#FF0069"
+            />
+
+        </svg>
+
+    </div>
 
     <div>
-        <div class="contact-title">INSTAGRAM</div>
+
+        <div class="contact-title">
+            INSTAGRAM
+        </div>
+
         <div class="contact-text">
             @transdaf
         </div>
+
     </div>
+
 </a>
 
-    </section>
+</section>
 
 
-    <!-- EMPRESAS -->
-    <h2 class="section-title">
-        EMPRESAS QUE CONFÍAN EN NOSOTROS
-    </h2>
+<!-- =========================
+     EMPRESAS
+========================= -->
 
-    <section class="companies">
+<h2 class="section-title">
+    EMPRESAS QUE CONFÍAN EN NOSOTROS
+</h2>
 
-        <div class="company">
-            <img src="../../auxilia.png" alt="Auxilia">
-        </div>
+<section class="companies">
 
-        <div class="company">
-            <img src="../../rac.png" alt="RAC Asistencia">
-        </div>
+    <div class="company">
+        <img src="../../auxilia.png" alt="Auxilia">
+    </div>
 
-        <div class="company">
-            <img src="../../macc.png" alt="MACC Asistencias">
-        </div>
+    <div class="company">
+        <img src="../../rac.png" alt="RAC Asistencia">
+    </div>
 
-        <div class="company">
-            <img src="../../reale.png" alt="Reale Seguros">
-        </div>
+    <div class="company">
+        <img src="../../macc.png" alt="MACC Asistencias">
+    </div>
 
-        <div class="company">
-            <img src="../../mok.png" alt="Grupo MOK">
-        </div>
+    <div class="company">
+        <img src="../../reale.png" alt="Reale Seguros">
+    </div>
 
-    </section>
+    <div class="company">
+        <img src="../../mok.png" alt="Grupo MOK">
+    </div>
+
+</section>
 
 
-    <!-- PIE -->
-    <footer class="footer">
+<!-- =========================
+     PIE
+========================= -->
 
-        <div class="footer-column">
-            🛡️
-            <strong>
-                COMPROMETIDOS CON LA SEGURIDAD,
-                RESPONSABILIDAD Y CALIDAD DE SERVICIO.
-            </strong>
-        </div>
+<footer class="footer">
 
-        <div class="footer-column">
-            Desarrollamos nuestras operaciones
-            desde el año 2019, entregando soluciones
-            confiables y profesionales.
-        </div>
+    <div class="footer-column">
 
-    </footer>
+        🛡️
+
+        <strong>
+            COMPROMETIDOS CON LA SEGURIDAD,
+            RESPONSABILIDAD Y CALIDAD DE SERVICIO.
+        </strong>
+
+    </div>
+
+    <div class="footer-column">
+
+        Desarrollamos nuestras operaciones
+        desde el año 2019, entregando soluciones
+        confiables y profesionales.
+
+    </div>
+
+</footer>
 
 </div>
 
 
+<!-- =========================
+     TEMPORIZADOR
+========================= -->
+
 <script>
-
-/*
-    TEMPORIZADOR VISUAL
-    -------------------
-    Esta primera versión muestra el contador
-    de 2 minutos.
-
-    Posteriormente conectaremos este contador
-    con la validación real de Cloudflare para
-    que la sesión expire también en el servidor.
-*/
 
 let seconds = 120;
 
@@ -868,6 +1257,7 @@ const timer = document.getElementById("timer");
 const countdown = setInterval(function () {
 
     const minutes = Math.floor(seconds / 60);
+
     const remainingSeconds = seconds % 60;
 
     timer.textContent =
@@ -882,8 +1272,11 @@ const countdown = setInterval(function () {
         timer.textContent = "00:00";
 
         document.querySelector(".status-box").style.borderColor = "#c62828";
+
         document.querySelector(".status-box").style.background = "#fff3f3";
+
         document.querySelector(".status-main").style.color = "#c62828";
+
         document.querySelector(".session").style.color = "#c62828";
 
         document.querySelector(".status-main").innerHTML =
@@ -904,3 +1297,4 @@ const countdown = setInterval(function () {
 
 </body>
 </html>
+```
